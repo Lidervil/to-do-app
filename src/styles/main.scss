@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish', sans-serif;
+}
+
+html {
+    background-color: #ffc2ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: hsl(267, 100%, 85%);
+    width: 80vw;
+    height: 80vh;
+    margin: 10vh 10vw;
+    border-radius: 15px;
+    outline: 3px solid #340926;
+
+        .header {
+        background-color: #692451;
+        color: #fbd9f0;
+        height: 10vh;
+        font-size: 2rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px 15px 0px 0px;
+        font-family: 'Mulish', sans-serif;
+    }
+        .main {
+        background-color: #E5E3E2;
+        color: #340926;
+        display: flex;
+        border-radius: 15px;
+            .project-container {
+                background-color: #FBB2E4;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                color: #340926;
+                width: 15vw;
+                height: 70vh;
+                gap: 10px;
+                overflow: auto;
+                border-radius: 0px 0px 0px 15px;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+
+                .project{
+                    p:hover{
+                        cursor: pointer;
+                        color: #F35EC4;
+                    }
+                    &.active{
+                        outline: solid 3px #ff16b5;
+                    }
+                }
+
+                .project, .project-add {
+                background-color: #fff;
+                width: 10vw;
+                height: 3vh;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                    &:first-of-type {
+                    margin-top: 15px;
+                }
+            }
+                .project-add {
+                cursor: pointer;
+                    &:hover {
+                    background-color: #F35EC4;
+                        p{
+                        color:white;
+                        }
+                }
+            }
+            
+                .project-edit {
+                    background-color: #fff;
+                    width: 10vw;
+                    height: 3vh;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .project-edit-input{
+                        margin-left: 5px;
+                        color: #990069;
+                        overflow: hidden;
+                    }
+
+                    .project-edit-btn{
+                        background-color: white;
+                        border-radius: 50%;
+                        width: 20px;
+                        height: 20px;
+                        outline: 1px solid #F35EC4;
+                        margin-right: 5px;
+
+                        &:hover {
+                            background-color: #84ffa5;
+                            color: #F35EC4;
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+        }
+            .task-container {
+            border-radius: 0px 0px 15px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            color: #340926;
+            font-size: 1rem;
+            background-color: #FDDEF3;
+            width: 65vw;
+            height: 70vh;
+
+            .task{
+                p:hover{
+                    cursor: pointer;
+                    color: #F35EC4;
+                }
+            }
+            
+            .task, .task-add {
+                background-color: #fff;
+                width: 55vw;
+                height: 3vh;
+                margin: 5px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                    &:first-of-type {
+                        margin-top: 15px;
+                    }
+                    &.open {
+                    height: 9vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    }
+                    &.form {
+                    height: 9vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                            .task-details {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                        }
+                    }
+                }   
+            
+                .task-add {
+                    cursor: pointer;
+                        &:hover{
+                        background-color: #F35EC4;
+                        p {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.task-details>input, .task-details>textarea {
+    margin-left: 5px;
+    color: #990069;
+}
+
+.task>p, .project>p, .task-details>p, .task-add>p,.project-add>p {
+    margin-left: 5px;
+    color: #990069;
+}
+
+.task-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.task-buttons>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.task-buttons>.prio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    outline: 1px solid #F35EC4;
+        &.low {
+            background-color: lightgreen;
+            color: green;
+        }
+        &.mid {
+            background-color: lightgoldenrodyellow;
+            color: orange;
+        }
+        &.high {
+            background-color: lightcoral;
+            color: red;
+        }
+}
+
+.task-buttons>p, .project-add>p {
+    margin-right: 5px;
+    color: #990069;
+}
+
+.task>button, .project>button, .task-add>button, .project-add>button {
+    margin-right: 5px;
+}
+
+button.del-task, button.del-project, button.add-project-btn, button.add-task-btn, button.form-button {
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    outline: 1px solid #F35EC4;
+    cursor: pointer;
+}
+
+.task-details>p:hover, .task-buttons>p:hover {
+    cursor: pointer;
+    color: #F35EC4;
+}
+
+button.del-task:hover, button.del-project:hover {
+    background-color: #990069;
+    color: #F35EC4;
+    cursor: pointer;
+}
+
+button.form-button:hover {
+    background-color: #84ffa5;
+    color: #F35EC4;
+    cursor: pointer;
+}
+
+.task:first-of-type {
+    margin-top: 15px;
+}
+
+input, select, option {
+    color: #990069;
+}
+
+textarea {
+    resize: none;
+}
