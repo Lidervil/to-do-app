@@ -7,7 +7,7 @@ var taskArray;
 var currentProject;
 var currentTasks;
 
-var localDataArr = JSON.parse(localStorage.getItem("projectArray"));
+var localDataArr = JSON.parse(localStorage.getItem('projectArray'));
 
 if (localDataArr === null) {
     projectArray = ['Home'];
@@ -16,7 +16,7 @@ if (localDataArr === null) {
     ];
 } else {
     projectArray = localDataArr;
-    taskArray = JSON.parse(localStorage.getItem("taskArray"));
+    taskArray = JSON.parse(localStorage.getItem('taskArray'));
 }
 
 document.body.appendChild(content());
